@@ -20,7 +20,7 @@ function loadSettings(): ServerSettings {
       return JSON.parse(readFileSync(SETTINGS_FILE, "utf8")) as ServerSettings;
     }
   } catch {}
-  return { sillyTavernMode: false };
+  return { sillyTavernMode: true };
 }
 
 function saveSettings(s: ServerSettings): void {
