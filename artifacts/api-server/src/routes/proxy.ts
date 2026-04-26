@@ -16,40 +16,36 @@ const OPENAI_CHAT_MODELS = [
   "gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano",
   "gpt-4o", "gpt-4o-mini",
   "o4-mini", "o3", "o3-mini",
-  "o1", "o1-mini", "o1-pro",
 ];
 const OPENAI_THINKING_ALIASES = OPENAI_CHAT_MODELS
   .filter((m) => m.startsWith("o"))
   .map((m) => `${m}-thinking`);
 
 const ANTHROPIC_BASE_MODELS = [
+  "claude-opus-4-7", "claude-sonnet-4-7", "claude-haiku-4-7",
   "claude-opus-4-6", "claude-opus-4-5", "claude-opus-4-1",
   "claude-sonnet-4-6", "claude-sonnet-4-5",
   "claude-haiku-4-5",
-  "claude-3-7-sonnet",
-  "claude-3-5-sonnet", "claude-3-5-haiku",
-  "claude-3-opus",
 ];
 
 const GEMINI_BASE_MODELS = [
+  "gemini-3.2-pro", "gemini-3.2-flash",
   "gemini-3.1-pro-preview", "gemini-3-flash-preview",
   "gemini-2.5-pro", "gemini-2.5-flash",
-  "gemini-2.0-flash", "gemini-2.0-flash-lite",
-  "gemini-1.5-pro", "gemini-1.5-flash",
 ];
 
 const OPENROUTER_FEATURED = [
+  "x-ai/grok-5", "x-ai/grok-5-fast",
   "x-ai/grok-4.20", "x-ai/grok-4.1-fast", "x-ai/grok-4-fast",
-  "x-ai/grok-3", "x-ai/grok-3-mini",
-  "meta-llama/llama-4-maverick", "meta-llama/llama-4-scout",
+  "deepseek/deepseek-v4", "deepseek/deepseek-r2",
   "deepseek/deepseek-v3.2", "deepseek/deepseek-r1", "deepseek/deepseek-r1-0528",
-  "mistralai/mistral-small-2603", "mistralai/mistral-large-2411", "mistralai/mistral-medium-3",
-  "qwen/qwen3.5-122b-a10b", "qwen/qwen3-235b-a22b", "qwen/qwen3-30b-a3b",
-  "google/gemini-2.5-pro", "anthropic/claude-opus-4.6",
+  "anthropic/claude-opus-4.7", "anthropic/claude-opus-4.6",
+  "google/gemini-3.2-pro", "google/gemini-2.5-pro",
+  "qwen/qwen3.5-max", "qwen/qwen3.5-122b-a10b",
+  "moonshotai/kimi-k2",
+  "meta-llama/llama-4-maverick", "meta-llama/llama-4-scout",
+  "mistralai/mistral-small-2603",
   "cohere/command-a", "amazon/nova-premier-v1", "baidu/ernie-4.5-300b-a47b",
-  "perplexity/sonar-pro", "perplexity/sonar",
-  "microsoft/phi-4",
-  "nvidia/llama-3.1-nemotron-ultra-253b-v1",
 ];
 
 const OPENAI_MODELS = OPENAI_CHAT_MODELS.map((id) => ({ id, description: "OpenAI model" }));
