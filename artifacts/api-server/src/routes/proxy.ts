@@ -12,6 +12,7 @@ const router: IRouter = Router();
 // ---------------------------------------------------------------------------
 
 const OPENAI_CHAT_MODELS = [
+  "gpt-5.5", "gpt-5.5-pro",
   "gpt-5.2", "gpt-5.1", "gpt-5", "gpt-5-mini", "gpt-5-nano",
   "gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano",
   "gpt-4o", "gpt-4o-mini",
@@ -22,27 +23,27 @@ const OPENAI_THINKING_ALIASES = OPENAI_CHAT_MODELS
   .map((m) => `${m}-thinking`);
 
 const ANTHROPIC_BASE_MODELS = [
-  "claude-opus-4-7", "claude-sonnet-4-7", "claude-haiku-4-7",
+  "claude-opus-4-7",
   "claude-opus-4-6", "claude-opus-4-5", "claude-opus-4-1",
   "claude-sonnet-4-6", "claude-sonnet-4-5",
   "claude-haiku-4-5",
 ];
 
 const GEMINI_BASE_MODELS = [
-  "gemini-3.2-pro", "gemini-3.2-flash",
-  "gemini-3.1-pro-preview", "gemini-3-flash-preview",
+  "gemini-3.1-pro-preview", "gemini-3.1-flash", "gemini-3.1-flash-lite",
+  "gemini-3-flash",
   "gemini-2.5-pro", "gemini-2.5-flash",
 ];
 
 const OPENROUTER_FEATURED = [
-  "x-ai/grok-5", "x-ai/grok-5-fast",
-  "x-ai/grok-4.20", "x-ai/grok-4.1-fast", "x-ai/grok-4-fast",
-  "deepseek/deepseek-v4", "deepseek/deepseek-r2",
+  "x-ai/grok-4.3", "x-ai/grok-4.20", "x-ai/grok-4-heavy",
+  "x-ai/grok-4.1-fast", "x-ai/grok-4-fast",
+  "deepseek/deepseek-v4-pro", "deepseek/deepseek-v4-flash",
   "deepseek/deepseek-v3.2", "deepseek/deepseek-r1", "deepseek/deepseek-r1-0528",
   "anthropic/claude-opus-4.7", "anthropic/claude-opus-4.6",
-  "google/gemini-3.2-pro", "google/gemini-2.5-pro",
-  "qwen/qwen3.5-max", "qwen/qwen3.5-122b-a10b",
-  "moonshotai/kimi-k2",
+  "google/gemini-3.1-pro", "google/gemini-2.5-pro",
+  "openai/gpt-5.5",
+  "qwen/qwen3.5-122b-a10b",
   "meta-llama/llama-4-maverick", "meta-llama/llama-4-scout",
   "mistralai/mistral-small-2603",
   "cohere/command-a", "amazon/nova-premier-v1", "baidu/ernie-4.5-300b-a47b",
